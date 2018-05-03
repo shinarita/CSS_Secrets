@@ -1,0 +1,43 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .8)), url('../images/bg.jpg');
+    background-size: cover;
+    min-height: 100%;
+}
+
+body {
+    padding: 10px;
+}
+
+/* common elements */
+
+.title {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.example-tox {
+    padding: 10px 0;
+}
+
+/* to-learn-box */
+
+.to-learn-box {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.to-learn-box .list {
+    list-style: decimal inside;
+}

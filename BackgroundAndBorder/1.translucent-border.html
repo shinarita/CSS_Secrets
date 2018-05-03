@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Translucent Border</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .content {
+            display: flex;
+        }
+
+        .ex {
+            border: 10px solid hsla(0, 0%, 100%, .5);
+            background: white;
+            height: 200px;
+            width: 200px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ex1 {
+            background: greenyellow;
+            border: 10px dashed #444;
+        }
+
+        .ex2 {
+            background-clip: padding-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        半透明边框
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.给一个容器设置一层白色背景和半透明白色边框，效果如下：</h4>
+            <p>原因：默认背景会延伸到边框所在区域的下层，即半透明边框仍显示容器本身的背景，不会显示父级的背景（css2.1）</p>
+        </div>
+        <div class="content">
+            <div class='ex'>
+            </div>
+            <div class="ex ex1">
+
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.css3增加background-clip属性：</h4>
+            <p>初始值为border-box：背景会被元素的border box裁切掉。padding-box会用内边距的外沿裁切背景。</p>
+        </div>
+        <div class="content">
+            <div class='ex ex2'>
+                background-clip:padding-box;
+            </div>
+        </div>
+    </div>
+
+
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>学习hsl语法</li>
+        </ul>
+    </div>
+</body>
+
+</html>

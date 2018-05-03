@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Translucent Border</title>
+    <style>
+        @keyframes wave-loading {
+            0% {
+                height: 10%;
+            }
+            50% {
+                height: 40%;
+            }
+            100% {
+                height: 10%;
+            }
+        }
+
+        .wave-loading {
+            width: 100px;
+            height: 100px;
+            background: #2196f3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wave-loading span {
+            display: block;
+            background: #fff;
+            width: 4%;
+            height: 10%;
+            border-radius: 5px;
+            margin-right: 8%;
+        }
+
+        .one {
+            animation: wave-loading 2.5s 1.3s infinite linear;
+        }
+
+        .two {
+            animation: wave-loading 2.5s 0.6s infinite linear;
+        }
+
+        .three {
+            animation: wave-loading 2.5s 0s infinite linear;
+        }
+
+        .four {
+            animation: wave-loading 2.5s 0.6s infinite linear;
+        }
+
+        .wave-loading span.five {
+            animation: wave-loading 2.5s 1.3s infinite linear;
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='wave-loading'>
+        <span class='one'></span>
+        <span class='two'></span>
+        <span class='three'></span>
+        <span class='four'></span>
+        <span class='five'></span>
+    </div>
+</body>
+
+</html>

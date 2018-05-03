@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Continuous Image Borders</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .ex {
+            margin-right: 10px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .ex1 {
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white), url("../images/stone-art.jpg");
+            background-size: cover;
+            background-clip: padding-box, border-box;
+        }
+
+        .ex2 {
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            url("../images/stone-art.jpg") border-box 0/cover;
+        }
+
+        .ex3 {
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg,
+            red 0, red 12.5%,
+            transparent 0, transparent 25%,
+            #58a 0, #58a 37.5%,
+            transparent 0, transparent 50%) 0 /5em 5em;
+        }
+
+        .ex4 {
+            padding: 1em;
+            border: 16px solid transparent;
+            border-image: 16 repeating-linear-gradient(-45deg,
+            red 0, red 1em,
+            transparent 0, transparent 2em,
+            #58a 0, #58a 3em,
+            transparent 0, transparent 4em);
+            background: white;
+            background-clip: padding-box;
+        }
+
+        @keyframes ants {
+            to {
+                background-position: 100%;
+            }
+        }
+
+        .ex5 {
+            padding: 1em;
+            border: 1px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg,
+            black 0, black 25%, white 0, white 50%) 0/.6em .6em;
+            animation: ants 12s linear infinite;
+        }
+
+        .ex6 {
+            border-top: .2em solid transparent;
+            border-image: 100% 0 0 linear-gradient(90deg, currentColor 4em, transparent 0);
+            padding-top: 1em;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        连续的图像边框
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.解决方案：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex1'>
+                I have a nice stone art border, don't I look pretty?
+            </div>
+
+            <div class='ex ex2'>
+                I have a nice stone art border, don't I look pretty?
+            </div>
+            <div class='ex ex2'>
+                <p>I have a nice stone art border, don't I look pretty?</p>
+                <p>I have a nice stone art border, don't I look pretty?</p>
+                <p>I have a nice stone art border, don't I look pretty?</p>
+                <p>I have a nice stone art border, don't I look pretty?</p>
+            </div>
+            <div class='ex ex3'>
+                <p>My border is reminiscent of vintage envelopes, how cool is that?</p>
+            </div>
+            <div class='ex ex4'>
+                <p>My border is reminiscent of vintage envelopes, how cool is that?</p>
+            </div>
+            <div class='ex ex5'>
+                <p>My border is reminiscent of vintage envelopes, how cool is that?</p>
+            </div>
+            <div class='ex ex6'>
+                <p>This is a footnoe.</p>
+            </div>
+        </div>
+    </div>
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>border-image各属性</li>
+            <li>background缩写各属性</li>
+            <li>background-origin/background-clip/</li>
+        </ul>
+    </div>
+</body>
+
+</html>

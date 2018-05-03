@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stripped Background</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        html {
+            background: #fff;
+        }
+
+        .content {
+            display: flex;
+            padding: 10px;
+        }
+
+        .ex {
+            width: 200px;
+            height: 150px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+        }
+
+        .ex1 {
+            background: linear-gradient(#fb3, #58a);
+        }
+
+        .ex2 {
+            background: linear-gradient(#fb3 20%, #58a 80%);
+        }
+
+        .ex3 {
+            background: linear-gradient(#fb3 40%, #58a 60%);
+        }
+
+        .ex4 {
+            background: linear-gradient(#fb3 50%, #58a 50%);
+        }
+
+        .ex5 {
+            background: linear-gradient(#fb3 50%, #58a 50%) no-repeat;
+            background-size: 100% 30px;
+        }
+
+        .ex6 {
+            background: linear-gradient(#fb3 30%, #58a 0);
+            background-size: 100% 30px;
+        }
+
+        .ex7 {
+            background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
+            background-size: 100% 50px;
+        }
+
+        .ex8 {
+            background: linear-gradient(to right, #fb3 50%, #58a 0);
+            background-size: 30px 100%;
+        }
+
+        .ex9 {
+            background: linear-gradient(45deg, #fb3 50%, #58a 0);
+            background-size: 30px 30px;
+        }
+
+        .ex10 {
+            background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+            background-size: 30px 30px;
+        }
+
+        .ex11 {
+            background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+            background-size: 42.426406871px 42.426406871px;
+        }
+
+        .ex12 {
+            background: repeating-linear-gradient(45deg, #fb3, #58a 30px);
+        }
+
+        .ex13 {
+            background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+        }
+
+        .ex14 {
+            background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+        }
+
+        .ex15 {
+            background: #58a;
+            background-image: repeating-linear-gradient(30deg,
+            hsla(0, 0%, 100%, .1),
+            hsla(0, 0%, 100%, .1) 15px,
+            transparent 0,
+            transparent 30px);
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        条纹背景
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.水平条纹：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex1'>
+                background: linear-gradient(#fb3, #58a);
+            </div>
+            <div class='ex ex2'>
+                background: linear-gradient(#fb3 20%, #58a 80%);
+            </div>
+            <div class='ex ex3'>
+                background: linear-gradient(#fb3 40%, #58a 60%);
+            </div>
+            <div class='ex ex4'>
+                background: linear-gradient(#fb3 50%, #58a 50%);
+            </div>
+            <div class='ex ex5'>
+                background-size: 100% 30px;
+            </div>
+            <div class='ex ex6'>
+            </div>
+            <div class='ex ex7'>
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.垂直条纹：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex8'>
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>3.斜向条纹：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex9'>
+            </div>
+            <div class='ex ex10'>
+            </div>
+            <div class='ex ex11'>
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>4.更好的斜向条纹：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex12'>
+            </div>
+            <div class='ex ex13'>
+            </div>
+            <div class='ex ex14'>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-tox">
+        <div class='title'>
+            <h4>5.灵活的同色系条纹：</h4>
+            <p>把最深的颜色指定为背景色，同时把半透明白色条纹叠加到背景色之上得到浅色条纹</p>
+        </div>
+        <div class="content">
+            <div class='ex ex15'>
+            </div>
+        </div>
+    </div>
+
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>background所有子属性</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Background Position</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .content {
+            display: flex;
+            padding: 10px;
+        }
+
+        .ex {
+            background: yellowgreen;
+            height: 200px;
+            width: 200px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ex1 {
+            background: url('../images/code-braces.svg') no-repeat bottom right #58a;
+            background-position: right 20px bottom 10px;
+        }
+
+        .ex2 {
+            padding: 10px;
+            background: url('../images/code-braces.svg') no-repeat #58a bottom right;
+            background-origin: content-box;
+        }
+
+        .ex3 {
+            background: url('../images/code-braces.svg') no-repeat #58a;
+            background-position: calc(100% - 20px) calc(100% - 10px);
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        灵活的背景定位
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.background-position：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex1'>
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.background-origin：</h4>
+            <p>偏移量与容器的内边距一致</p>
+        </div>
+        <div class="content">
+            <div class='ex ex2'>
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>3.calc()方案：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex3'>
+            </div>
+        </div>
+    </div>
+
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>outline-offset包括在outline简写中吗？</li>
+        </ul>
+    </div>
+</body>
+
+</html>

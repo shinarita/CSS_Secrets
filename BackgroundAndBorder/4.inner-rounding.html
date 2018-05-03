@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inner Rounding</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        html {
+            background: #fff;
+        }
+
+        .content {
+            display: flex;
+            padding: 10px;
+        }
+
+        .ex {
+            width: 200px;
+        }
+
+        .ex1 {
+            background: #655;
+            padding: .8em;
+        }
+
+        .ex1>div {
+            background: tan;
+            border-radius: .8em;
+            padding: 1em;
+        }
+
+        .ex2 {
+            background: tan;
+            border-radius: .8em;
+            padding: 1em;
+            box-shadow: 0 0 0 .6em #655;
+            margin-right: 2em;
+        }
+
+        .ex3 {
+            background: tan;
+            border-radius: .8em;
+            padding: 1em;
+            outline: .6em solid #655;
+            margin-right: 2em;
+        }
+
+        .ex4 {
+            background: tan;
+            border-radius: .8em;
+            padding: 1em;
+            box-shadow: 0 0 0 .6em #655;
+            outline: .8em solid #655;
+            margin-right: 2em;
+        }
+        .ex5{
+            background: tan;
+            border-radius: .8em;
+            padding: 1em;
+            outline: .8em solid #655;
+            box-shadow: 0 0 0 .6em rgb(235, 17, 17);
+            margin-right: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        边框内圆角
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.两个元素实现：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex1'>
+                <div>
+                    I have a nice subtle inner rounding, don't I look pretty?
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.只用一个元素实现：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex2'>
+                I have a nice subtle inner rounding, don't I look pretty?
+            </div>
+            <div class='ex ex3'>
+                I have a nice subtle inner rounding, don't I look pretty?
+            </div>
+            <div class='ex ex4'>
+                I have a nice subtle inner rounding, don't I look pretty?
+            </div>
+            <div class='ex ex5'>
+                I have a nice subtle inner rounding, don't I look pretty?
+            </div>
+        </div>
+    </div>
+
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>border-radius，数学原理</li>
+        </ul>
+    </div>
+</body>
+
+</html>

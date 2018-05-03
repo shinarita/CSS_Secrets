@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiple Borders</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .content {
+            display: flex;
+            padding: 10px;
+        }
+
+        .ex {
+            background: yellowgreen;
+            height: 200px;
+            width: 200px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ex1 {
+            box-shadow: 0 0 0 10px #655,
+            0 0 0 15px deeppink,
+            0 2px 5px 15px rgba(0, 0, 0, .6);
+        }
+
+        .ex2 {
+            border: 10px solid #655;
+            outline: 5px solid deeppink;
+        }
+
+        .ex3 {
+            border: 1px dashed #fff;
+            outline: 5px solid yellowgreen;
+            margin-left: 10px;
+        }
+
+        .ex4 {
+            outline: 1px dashed #fff;
+            outline-offset: -5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        多重边框
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.box-shadow方案：</h4>
+            <p>第四个参数（扩张半径），通过指定正值或负值，可以让投影面积加大或减小。一个>0扩张半径+两个为零的偏移量+为零的模糊值=像一道实线的边框。</p>
+            <p>box-shadow支持逗号分隔语法，可以创建任意数量的投影。</p>
+            <p>层层叠加，第一层位于最顶层，需按此规律调整扩张半径。</p>
+            <h4>注意的点：</h4>
+            <p>投影!=边框。不影响布局，不受到box-sizing的影响，需通过padding或margin来空余需要的空间。</p>
+            <p>不会响应鼠标点击事件。</p>
+        </div>
+        <div class="content">
+            <div class='ex ex1'>
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.outline方案：</h4>
+            <p>可设置虚线边框效果。</p>
+        </div>
+        <div class="content">
+            <div class='ex ex2'>
+            </div>
+            <div class='ex ex3'>
+            </div>
+            <div class='ex ex4'>
+            </div>
+        </div>
+    </div>
+
+
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>outline-offset包括在outline简写中吗？</li>
+        </ul>
+    </div>
+</body>
+
+</html>
