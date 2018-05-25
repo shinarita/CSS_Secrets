@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parellelogram</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .ex {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+            height: 100px;
+            background: gold;
+        }
+
+        .ex1,
+        .ex2 {
+            transform: skewX(-45deg);
+            margin-left: 50px;
+        }
+
+        .ex2 p {
+            transform: skewX(45deg);
+        }
+
+        .ex3 {
+            position: relative;
+            margin-left: 200px;
+        }
+
+        .ex3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -25%;
+            z-index: -1;
+            background: gold;
+            transform: skew(45deg);
+            height: 100%;
+            width: 150%;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        平行四边形
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.普通方案和伪元素方案：</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex1'>
+                <p>This is my content.连文字都变形了。</p>
+            </div>
+            <div class='ex ex2'>
+                <p>This is my content.连文字都变形了。</p>
+            </div>
+            <div class='ex ex3'>
+                <p>This is my content.连文字都变形了。</p>
+            </div>
+        </div>
+    </div>
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>
+                <a href="http://simurai.com/archive/buttons">糖果按钮</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

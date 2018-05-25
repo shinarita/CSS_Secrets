@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diamond Images</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .picture {
+            width: 400px;
+            transform: rotate(45deg);
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .picture>img {
+            max-width: 100%;
+            transform: rotate(-45deg) scale(1.42);
+            display: block;
+        }
+
+        .picture1>img {
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            transition: 1s clip-path;
+        }
+
+        .picture1>img:hover {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">
+        菱形
+    </h4>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.菱形图片：两层结构，通过内外不同翻转实现</h4>
+        </div>
+        <div class="content">
+            <div class='picture'>
+                <img src='../images/adamcatlace.jpg' alt='cat' />
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.裁切路径方案：clip-path</h4>
+        </div>
+        <div class="content">
+            <div class='picture1'>
+                <img src='../images/adamcatlace.jpg' alt='cat' />
+            </div>
+        </div>
+    </div>
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>
+                <a href="http://simurai.com/archive/buttons">糖果按钮</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
