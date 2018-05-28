@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Single Box Shadow</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        html {
+            background: none;
+        }
+
+        .ex {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+            height: 100px;
+            background: gold;
+        }
+
+        .ex1 {
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, .5);
+        }
+
+        .ex2 {
+            box-shadow: 0 5px 4px -4px black;
+        }
+
+        .ex3 {
+            box-shadow: 3px 3px 6px -3px black;
+        }
+
+        .ex4 {
+            box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
+        }
+
+        .ex5 {
+            border-radius: 100%;
+            box-shadow: 3px 3px 6px -3px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.单侧阴影</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex1'>
+            </div>
+            <div class='ex ex2'>
+            </div>
+            <div class='ex ex3'>
+            </div>
+            <div class='ex ex4'>
+            </div>
+            <div class='ex ex5'>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
