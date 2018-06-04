@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkboxes</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        body {
+            font: 150%/1.6 sans-serif;
+        }
+
+        .ex {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: auto;
+            min-height: 100px;
+            background: white;
+            padding: 30px;
+        }
+
+        input[type="checkbox"] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        input[type="checkbox"]+.btn-label::before {
+            content: '\a0';
+            display: inline-block;
+            vertical-align: .2em;
+            width: .8em;
+            height: .8em;
+            margin-right: .2em;
+            border-radius: .2em;
+            background: silver;
+            text-indent: .15em;
+            line-height: .65;
+            transition: .5s;
+        }
+
+        input[type="checkbox"]:checked+.btn-label::before {
+            content: '\2713';
+            background: yellowgreen;
+        }
+
+        input[type="checkbox"]:focus+.btn-label::before {
+            box-shadow: 0 0 .1em .1em #58a;
+        }
+
+        input[type="checkbox"]:disabled+.btn-label::before {
+            background: gray;
+            box-shadow: none;
+            color: #555;
+        }
+
+        .btn-label1 {
+            display: inline-block;
+            padding: .3em .5em;
+            background: #ccc;
+            background-image: linear-gradient(#ddd, #bbb);
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: .3em;
+            box-shadow: 0 1px white inset;
+            text-align: center;
+            text-shadow: 0 1px 1px white;
+        }
+
+        input[type='checkbox']:checked+.btn-label1,
+        input[type='checkbox']:active+label {
+            box-shadow: .05em .1em .2em rgba(0, 0, 0, .6) inset;
+            border-color: rgba(0, 0, 0, .3);
+            background: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.用户自定义复选框</h4>
+        </div>
+        <div class="content">
+            <p class="ex">
+                <input type='checkbox' id='awesome' />
+                <label for='awesome' class='btn-label'>Awesome</label>
+                <br/>
+                <input type='checkbox' id='awesome1' checked />
+                <label for='awesome1' class='btn-label'>Awesome</label>
+                <br/>
+                <input type='checkbox' id='awesome2' disabled />
+                <label for='awesome2' class='btn-label'>Awesome</label>
+                <br/>
+                <input type='checkbox' id='awesome3' disabled checked/>
+                <label for='awesome3' class='btn-label'>Awesome</label>
+            </p>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.开关式按钮</h4>
+        </div>
+        <div class="content">
+            <p class="ex">
+                <input type='checkbox' id='awesome4' />
+                <label for='awesome4' class='btn-label1'>Awesome</label>
+            </p>
+        </div>
+    </div>
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>Demo</li>
+        </ul>
+    </div>
+</body>
+
+</html>

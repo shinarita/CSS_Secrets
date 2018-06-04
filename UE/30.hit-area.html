@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hit Area</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .ex {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            min-width: 200px;
+            height: 100px;
+            background: white;
+            padding: 30px;
+        }
+
+        .btn {
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background: burlywood;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            margin-right: 10px;
+            box-sizing: content-box;
+            padding: 0;
+        }
+
+        .btn2 {
+            border: 10px solid transparent;
+            background-clip: content-box;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .3) inset;
+        }
+
+        .btn3 {
+            border: 10px solid transparent;
+            background-clip: content-box;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .3) inset, 0 .1em .2em -.05em rgba(0, 0, 0, .5);
+        }
+
+        .btn4 {
+            position: relative;
+        }
+
+        .btn4::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.扩大可点击区域</h4>
+        </div>
+        <div class="content">
+            <div class='ex'>
+                <button class='btn btn1'>
+                    +
+                </button>
+                <button class='btn btn2'>
+                    +
+                </button>
+                <button class='btn btn3'>
+                    +
+                </button>
+                <button class='btn btn4'>
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class='to-learn-box'>
+        <h3>TODO：</h3>
+        <ul class='list'>
+            <li>Demo</li>
+        </ul>
+    </div>
+</body>
+
+</html>

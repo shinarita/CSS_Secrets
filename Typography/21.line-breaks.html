@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Line Breaks</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .ex {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            min-width: 200px;
+            background: white;
+            padding: 10px;
+        }
+
+        dt,
+        dd {
+            display: inline;
+        }
+
+        dd {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        dd+dt::before {
+            content: '\A';
+            white-space: pre;
+        }
+
+        dd+dd::before {
+            content: ',';
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>插入换行</h4>
+        </div>
+        <div class="content">
+            <dl class='ex'>
+                <dt>Name:</dt>
+                <dd>Shinarita</dd>
+                <dt>Email:</dt>
+                <dd>jz20015@163.com</dd>
+                <dd>juan910429@sina.com</dd>
+                <dt>Location:</dt>
+                <dd>China</dd>
+            </dl>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dyeing Effect</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        .ex {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 400px;
+            height: 400px;
+            background: gold;
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+            display: block;
+            transition: .5s filter;
+        }
+
+        .img1 {
+            filter: sepia(1) saturate(4);
+        }
+
+        .img1:hover,
+        .img1:focus {
+            filter: none;
+        }
+
+        .img2 {
+            filter: sepia(1) saturate(4) hue-rotate(295deg);
+        }
+
+        .img2:hover,
+        .img2:focus {
+            filter: none;
+        }
+
+        .ex2 {
+            background: hsl(335, 100%, 50%);
+        }
+
+        .img3 {
+            mix-blend-mode: luminosity;
+        }
+
+        .ex3 {
+            width: 400px;
+            height: 400px;
+            background-size: cover;
+            background-color: hsl(335, 100%, 50%);
+            background-blend-mode: luminosity;
+            transition: .5s background-color;
+        }
+
+        .ex3:hover {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>1.纯CSS方法实现图片染色效果：基于滤镜的方案</h4>
+        </div>
+        <div class="content">
+            <div class='ex'>
+                <img class="img img1" src='../images/adamcatlace.jpg' alt='cat' />
+            </div>
+            <div class='ex'>
+                <img class="img img2" src='../images/adamcatlace.jpg' alt='cat' />
+            </div>
+        </div>
+    </div>
+    <div class="example-tox">
+        <div class='title'>
+            <h4>2.基于混合模式的方案</h4>
+        </div>
+        <div class="content">
+            <div class='ex ex2'>
+                <img class="img img3" src='../images/adamcatlace.jpg' alt='cat' />
+            </div>
+            <div class="ex3" style="background-image:url(../images/adamcatlace.jpg)">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

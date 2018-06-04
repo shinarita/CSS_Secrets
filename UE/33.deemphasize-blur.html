@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deemphasize Blur</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        html {
+            background: none;
+        }
+
+        main {
+            transition: .6s;
+            background: white;
+        }
+
+        main.de-emphasized {
+            filter: blur(3px);
+        }
+
+        dialog {
+            /* position: fixed;
+            top: 50%;
+            left: 50%;margin: -5em;
+            z-index: 1; */
+            width: 10em;
+            padding: 2em;
+            border: 1px solid silver;
+            border-radius: .5em;
+            box-shadow: 0 .2em .5em rgba(0, 0, 0, .5), 0 0 0 100vmax rgba(0, 0, 0, .2);
+        }
+
+        /* dialog:not([open]){
+            display: none;
+        } */
+
+        body {
+            font: 150%/1.6 Baskerville, Palatino, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Show dialog</button>
+    <main>
+        喜欢花，是一件令他人赏心悦目、让自己陶冶情操的事情。 在《诗经·郑风》中有这样的场景：“维士与女，伊其相谑，赠之以芍药。” 这首《溱洧》描绘了每年仲春时节，少男少女们齐聚溱、洧河畔，结伴共同赏春游玩的乐趣。美好的年轻人们相互赠予芍药花，以示内心的欢喜和悸动。
+        为何要赠以“芍药”，而不是“雏菊”、“牡丹”或者“玫瑰”呢? 因为芍药别名“江蓠”，谐音“将离”，在古人的习俗中“言将离赠别此草也”，也就是说离别之际相互赠送芍药，约定明年再次相见。于是“芍药”成为了象征男女情感的信物，“芍药之和”则指男轻女爱之和乐。
+        《红楼梦》第六十二回写了一幕“憨湘云醉眠芍药裀”，可与“黛玉葬花”、“宝钗扑蝶”并称三大最美之意“境”。 它说的是贾宝玉与宝琴、平儿、邢岫烟恰好同一天生日，大家为了庆祝，在芍药圃的红香圃中设宴，或行酒令，或比划拳，热闹非常，一时发现史湘云不见了，便派人去寻她，下人回报说湘云在花园里睡着了。
+        ……果见湘云卧于山石僻处一个石磴子上，业经香梦沈酣。四面芍药花飞了一身，满头脸衣襟上皆是红香散乱。手中的扇子在地下，也半被落花埋了，一群蜜蜂蝴蝶闹嚷嚷的围着。又用鲛帕包了一包芍药花瓣枕着。众人看了，又是爱，又是笑，忙上来推唤搀扶。湘云口内犹作睡语说酒令，嘟嘟囔囔说：“泉香酒冽，……醉扶归，宜会亲友。”……
+        ——《红楼梦》第六十二回 湘云醉眠（清．改琦），来源：维基百科 “裀”是垫子、褥子的意思，“醉眠芍药裀”就是喝醉酒后，以芍药花瓣为褥躺下睡着了，这是古人生活中致美、致雅、致趣之事。 虽然现代都市青年的日常生活很忙，忙到都没有时间给自己煮一顿饭，更不可能有地界让我们醉卧落花裀。但是花一点点时间、买一把美丽芍药来犒劳自己，让生活变得雅致而有趣，总是可以的。
+    </main>
+    <dialog onClick="">
+        I'm a dialog. Click on me to dismiss.
+    </dialog>
+    <script>
+        function $(sel) {
+            return document.querySelector(sel);
+        }
+
+        const dialog = $('dialog');
+        const main = $('main');
+
+        $('button').onclick = function () {
+            // dialog.setAttribute('open', '');
+            dialog.showModal()
+            main.classList.add('de-emphasized');
+        }
+
+        dialog.onclick = function () {
+            this.close();
+            // if (this.close) {
+            //     this.close()
+            // } else {
+            //     this.removeAttribute('open')
+            // }
+            main.classList.remove('de-emphasized');
+        }
+    </script>
+</body>
+
+</html>
