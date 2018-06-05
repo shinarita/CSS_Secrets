@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Comparision</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        html {
+            background: none;
+        }
+
+        .image-slider,
+        .image-slider2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        img {
+            display: block;
+            user-select: none;
+        }
+
+        .image-slider>div,
+        .image-slider2>div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            overflow: hidden;
+            resize: horizontal;
+            max-width: 100%;
+        }
+
+        .image-slider>div::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            cursor: ew-resize;
+            padding: 5px;
+            background: linear-gradient(-45deg, white 50%, transparent 0);
+            background-clip: content-box;
+        }
+
+        .image-slider2 input {
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            margin: 0;
+            filter: contrast(.5);
+            mix-blend-mode: luminosity;
+            width: 50%;
+            transform: scale(2);
+            transform-origin: left bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-slider">
+        <div>
+            <img src="../images/adamcatlace-before.jpg" alt='before' />
+        </div>
+        <img src="../images/adamcatlace.jpg" alt='after' />
+    </div>
+    <div class="image-slider2">
+        <img src="../images/adamcatlace-before.jpg" alt='before' />
+        <img src="../images/adamcatlace.jpg" alt='after' />
+    </div>
+    <script>
+        function $(sel) {
+            return document.querySelector(sel)
+        }
+        const slider = $('.image-slider2')
+        const div = document.createElement('div');
+        const img = slider.querySelector('img');
+        slider.insertBefore(div, img)
+        div.appendChild(img)
+
+        const range = document.createElement('input')
+        range.type = 'range'
+        range.oninput = function () {
+            div.style.width = this.value + '%'
+        }
+        slider.appendChild(range)
+    </script>
+</body>
+
+</html>
